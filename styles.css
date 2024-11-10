@@ -1,0 +1,243 @@
+body {
+    font-family: 'LXGW WenKai TC', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, white, #67a9bd);
+    color: #2C3E50;
+}
+nav {
+    background-color: #cfe7f0;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #285971;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #333;
+}
+@media (max-width: 767px) {
+    .nav-links {
+        flex-direction: row; /* 保持水平排列 */
+        gap: 10px;
+        justify-content: center; /* 將項目置中 */
+    }
+    .nav-links a {
+        font-size: 12px; /* 調整導航列項目的文字大小 */
+    }
+}
+.sections-container {
+    display: flex;
+    justify-content: space-around; /* 均勻分佈 */
+    gap: 20px; /* 區塊間距 */
+    margin: 20px 0;
+}
+.section {
+    flex: 1; /* 每個區塊等寬 */
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+    .sections-container {
+        flex-direction: column; /* 垂直排列 */
+    }
+    .section {
+        margin-bottom: 15px;
+    }
+}
+.name {
+    font-size: 32px; /* 最大字體 */
+    font-weight: bold;
+    color: #305e80;
+    margin: 0;
+}
+.school {
+    font-size: 20px;
+    color: #3a526a;
+    margin: 5px 0;
+}
+.location {
+    font-size: 18px;
+    color: #3a526a;
+    margin: 5px 0;
+}
+.birthdate {
+    font-size: 14px; /* 最小字體 */
+    color: #6E7D88;
+    margin: 5px 0;
+}
+.motto {
+    font-size: 18px;
+    font-style: italic;
+    color: #305e80; /* 特殊顏色，強調語錄 */
+    margin: 10px 0;
+}
+.about-text {
+    text-align: left;
+    max-width: 300px;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; /* 方形邊角圓弧 */
+    object-fit: cover;
+}
+header {
+    background-color: #afc8d2;
+    padding: 20px;
+    border-radius: 0 0 10px 10px; /* 上兩角為直角，下兩角為圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 20px; /* 調整兩個元素之間的距離 */
+}
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 767px) {
+    .header-content .name {
+        font-size: 24px; /* 調整名字的字體大小 */
+    }
+    .header-content .school {
+        font-size: 14px; /* 調整學校名稱的字體大小 */
+    }
+    .header-content .location {
+        font-size: 16px; /* 調整位置的字體大小 */
+    }
+    .header-content .birthdate {
+        font-size: 12px; /* 調整生日的字體大小 */
+    }
+    .header-content .motto {
+        font-size: 16px; /* 調整座右銘的字體大小 */
+    }
+}
+h2 {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px 0;
+}
+.experience, .club-experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+.experience-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+.experience-item:hover {
+    transform: scale(1.02);
+}
+.experience-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.circle-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 預設為四欄 */
+    gap: 20px;
+    justify-items: center;
+}
+.circle {
+    text-align: center;
+    width: 100px;
+}
+.circle-bg {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10;
+}
+.circle-progress {
+    fill: none;
+    stroke: rgb(40, 89, 113);
+    stroke-width: 10;
+    transition: stroke-dashoffset 0.5s;
+}
+@media (max-width: 767px) {
+    .circle-skills {
+        grid-template-columns: repeat(2, 1fr); /* 改為兩欄排列 */
+    }
+}
+footer {
+    background-color: #cfe7f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.social-link img {
+    width: 30px;
+    height: 30px;
+}
+@media (min-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    .experience {
+        justify-content: space-between;
+    }
+    .interests,
+    .circle-skills,
+    .club-experience {
+        justify-content: space-around;
+    }
+}
+@media (max-width: 767px) {
+    .experience-item,
+    .interest,
+    .circle {
+        width: 100%;
+        max-width: 300px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
